@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    margin-bottom: 50px;
+}
+
+header {
+    background-color: white;
+    color: #494848;
+    display: flex;
+    align-items: top; /* Align items vertically in the header */
+    height: 130px;
+}
+
+#logo {
+    margin: 0;
+    padding-left: 50px;
+    padding-top: 20px;
+    font-size: 50px; /* Adjust the font size as needed */
+}
+
+nav {
+    background-color: #ffffff;
+    height: 60px; /* Adjust the height as needed */
+    line-height: 60px; /* Center the links vertically within the nav */
+    flex-grow: 1; /* Allow the nav to occupy remaining space */
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+ 
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Align the links to the center */
+}
+
+li {
+    margin: 0 15px;
+    position: relative;
+}
+
+a {
+    color: #282727;
+    text-decoration: none;
+    padding: 0 10px;
+    position: relative; /* Add position relative to the link */
+}
+
+/* Add vertical bars */
+li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -5px;
+    bottom: 10px;
+    border-right: 2px solid #fff;
+}
+
+/* Add orange-red vertical box to the "Home" link */
+#home {
+    position: relative;
+    z-index: 1;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%; /* Make the box cover the whole navbar vertically */
+    background-color: orangered;
+    z-index: -1;
+}
+a:active {
+    color: #f26d21;
+}
+
+#main{
+    margin-top: 50px;
+    margin-left: 10%;
+    height: 450px;
+    width: 1000px;
+    background-image: url("Screenshot (121).png");
+    background-repeat:no-repeat;
+}
+
+#personal{
+    padding: 0px ;
+    margin-left: 150px;
+
+}
+
+.move-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+.move-btn:hover {
+    transform: translateY(-10px);
+}
+
+#btn{
+    background-color: #008361;
+    padding: 15px;
+    border-radius: 8px;
+    
+}
+
+/* ... Your existing CSS ... */
+
+/* Pop-up styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 999;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+#closeBtn {
+    background-color: #008361;
+    color:rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Show the popup when the button is clicked */
+.show-popup {
+    display: block;
+}
+
+
+
+
